@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use App\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
@@ -37,10 +39,24 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required|unique:supplier',
+            'phone' => 'required'
+        ]);
+
+        DB::beginTransaction();
         $supplier = new Supplier;
         $supplier->name = $request->input('name');
         $supplier->phone = $request->input('phone');
         $supplier->save();
+
+        for($i = 0; $i < count($request->input('item_name')); $i++) {
+            $item = new Item;
+            $item->name = $request->input('item_name')[$i];
+            $item->code = $request->input('item_name')[$i];
+            $item->save();
+        }
+        DB::commit();
 
         return redirect('supplier');
     }

@@ -5,6 +5,16 @@
         <div class="col-lg-12">
             <h1 class="page-header">Supplier</h1>
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <a href="{{ url('supplier') }}" class="btn btn-primary">List</a>
             <a href="{{ url('supplier/create') }}" class="btn btn-primary">Create</a>
 
