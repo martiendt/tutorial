@@ -8,6 +8,9 @@
                 <a href="{{ url('/supplier') }}"><i class="fa fa-user fa-fw"></i> Supplier</a>
             </li>
             <li>
+                <a href="{{ url('/customer') }}"><i class="fa fa-tag fa-fw"></i> Customer</a>
+            </li>
+            <li>
                 <a href="{{ url('/item') }}"><i class="fa fa-tag fa-fw"></i> Item</a>
             </li>
             <li>

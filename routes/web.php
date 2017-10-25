@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::resource('supplier', 'SupplierController');
 Route::resource('item', 'ItemController');
+Route::resource('customer', 'CustomerController');
 

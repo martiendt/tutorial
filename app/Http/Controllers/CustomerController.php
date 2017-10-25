@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Supplier;
+use App\Customer;
 use Illuminate\Http\Request;
 
-class SupplierController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $view = view("supplier/index");
-        $view->suppliers = Supplier::select('id','name','phone')->get();
+        $view = view("customer/index");
+        $view->customers = Customer::all();
         return $view;
     }
 
@@ -26,7 +26,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view("supplier/create");
+        return view("customer/create");
     }
 
     /**
@@ -37,13 +37,13 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
+        $customer = new  Customer;
+        $customer->name = $request->input('name');
+        $customer->phone = $request->input('phone');
+        $customer->save();
+        return redirect('customer');
 
-        $supplier = new Supplier;
-        $supplier->name = $request->input('name');
-        $supplier->phone = $request->input('phone');
-        $supplier->save();
 
-        return redirect('supplier');
     }
 
     /**
