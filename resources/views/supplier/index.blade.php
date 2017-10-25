@@ -26,16 +26,13 @@
                             </tr>
                             </thead>
                             <tbody>
+                            @foreach($suppliers as $supplier)
                             <tr>
-                                <td>1</td>
-                                <td>Mark</td>
-                                <td>081123424</td>
+                                <td>{{ $supplier->id }}</td>
+                                <td>{{ $supplier->name }}</td>
+                                <td>{{ $supplier->phone }}</td>
                             </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Jacob</td>
-                                <td>-</td>
-                            </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

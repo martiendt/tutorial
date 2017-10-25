@@ -17,16 +17,15 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form role="form">
+                            <form role="form" action="{{ url('supplier') }}" method="post">
+                                {{ csrf_field() }}
                                 <div class="form-group">
                                     <label>Name</label>
-                                    <input class="form-control">
-                                    <p class="help-block"></p>
+                                    <input name="name" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label>Phone</label>
-                                    <input class="form-control">
-                                    <p class="help-block"></p>
+                                    <input name="phone" class="form-control">
                                 </div>
 
                                 <input type="submit" value="Submit">
