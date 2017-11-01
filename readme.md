@@ -3,3 +3,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/martiendt/tutorial/badge.svg?branch=master)](https://coveralls.io/github/martiendt/tutorial?branch=master)
 
 ## About This Tutorial
+
+Testing CI
