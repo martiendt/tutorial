@@ -14,8 +14,9 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $view = view("customer/index");
+        $view = view('customer/index');
         $view->customers = Customer::all();
+
         return $view;
     }
 
@@ -26,7 +27,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view("customer/create");
+        return view('customer/create');
     }
 
     /**
@@ -41,9 +42,8 @@ class CustomerController extends Controller
         $customer->name = $request->input('name');
         $customer->phone = $request->input('phone');
         $customer->save();
+
         return redirect('customer');
-
-
     }
 
     /**

@@ -14,8 +14,9 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $view = view("supplier/index");
+        $view = view('supplier/index');
         $view->suppliers = Supplier::select('id', 'name', 'phone')->get();
+
         return $view;
     }
 
@@ -26,7 +27,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view("supplier/create");
+        return view('supplier/create');
     }
 
     /**
@@ -54,6 +55,7 @@ class SupplierController extends Controller
     public function show($id)
     {
         $supplier = Supplier::find($id);
+
         return $supplier;
     }
 
@@ -77,7 +79,6 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
     }
 
     /**

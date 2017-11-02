@@ -14,11 +14,10 @@ class ItemController extends Controller
      */
     public function index()
     {
-        $view = view("item/index");
+        $view = view('item/index');
         $view->items = Item::all();
 
         return $view;
-
     }
 
     /**
