@@ -18,7 +18,7 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_script:
-  - php vendor/bin/codacycoverage clover
+  - php vendor/bin/codacycoverage phpunit
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
