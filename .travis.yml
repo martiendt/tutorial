@@ -13,6 +13,7 @@ before_script:
   - php artisan db:seed --class="DatabaseSeeder"
 
 script:
+  - mkdir -p build/logs
   - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_script:
