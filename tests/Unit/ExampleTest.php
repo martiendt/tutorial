@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Customer;
 
 class ExampleTest extends TestCase
 {
@@ -14,6 +15,14 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        $this->assertTrue(true);
+    }
+
+    public function testBasicTestCustomer()
+    {
+        $customer = new Customer;
+        $customer->all();
+        
         $this->assertTrue(true);
     }
 }
