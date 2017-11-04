@@ -8,6 +8,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-browsers
+    parallelism: 3
     working_directory: ~/laravel
     steps:
       - checkout
