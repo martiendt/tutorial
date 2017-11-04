@@ -47,7 +47,9 @@ jobs:
 
       - run:
          name: Enable XDebug
-         command: sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
+         command: sudo pecl channel-update pecl.php.net
+
+      - run: sudo pecl install xdebug && sudo docker-php-ext-enable xdebug
 
       - run:
          name: Setup Laravel testing environment variables for CircleCI test
