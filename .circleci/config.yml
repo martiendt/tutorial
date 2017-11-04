@@ -47,7 +47,7 @@ jobs:
 
       - run:
          name: Enable XDEBUG
-         command: pecl install xdebug && docker-php-ext-enable xdebug
+         command: docker-php-ext-enable xdebug
 
       - run:
          name: Setup Laravel testing environment variables for CircleCI test
