@@ -26,7 +26,13 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: composer install -n --prefer-dist --dev
+      - run: cp .env.example .env
+      - run: composer self-update
+      - run: composer install --no-interaction --dev
+      - run: mysql -e 'create database testing;'
+      - run: php artisan key:generate
+      - run: php artisan migrate
+      - run: php artisan db:seed --class="DatabaseSeeder"
 
       - save_cache:
           paths:
