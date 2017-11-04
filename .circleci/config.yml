@@ -115,3 +115,6 @@ jobs:
          name: Sending code coverage
          command: vendor/bin/codacycoverage clover
 
+      - run:
+         name: Sending code coverage
+         command: php vendor/bin/coveralls
