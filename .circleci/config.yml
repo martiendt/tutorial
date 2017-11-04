@@ -46,10 +46,6 @@ jobs:
          command: cp .env.testing .env
 
       - run:
-         name: Generate encryption key
-         command: php artisan key:generate
-
-      - run:
          name: Update composer to latest version
          command: sudo composer self-update
 
@@ -72,6 +68,10 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+
+      - run:
+         name: Generate encryption key
+         command: php artisan key:generate
 
       - run:
          name: Create SQLite Database
