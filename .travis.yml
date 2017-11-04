@@ -13,10 +13,10 @@ before_script:
   - php artisan db:seed --class="DatabaseSeeder"
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
-  - php vendor/bin/codacycoverage phpunit
+  - php vendor/bin/codacycoverage clover
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
