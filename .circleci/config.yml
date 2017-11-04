@@ -27,7 +27,7 @@ jobs:
           - v1-dependencies-
 
       - run: cp .env.example .env
-      - run: composer self-update
+      - run: composer install -n --prefer-dist
       - run: composer install --no-interaction --dev
       - run: mysql -e 'create database testing;'
       - run: php artisan key:generate
