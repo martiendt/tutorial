@@ -46,6 +46,10 @@ jobs:
          command: cp .env.testing .env
 
       - run:
+         name: Generate encryption key
+         command: php artisan key:generate
+
+      - run:
          name: Update composer to latest version
          command: sudo composer self-update
 
@@ -76,6 +80,10 @@ jobs:
       - run:
          name: Migrate Laravel Database
          command: php artisan migrate --env=testing --force
+
+      - run:
+         name: Run seeder
+         command: php artisan db:seed --class="DatabaseSeeder"
 
       - run:
          name: Compile Javascript & CSS for Browser Testing
