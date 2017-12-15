@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "079cc692304fbb442bf95291e19df22a",
+    "content-hash": "2f8f0fd29f86a669ba6032842f2ca43b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2862,12 +2862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-coveralls/php-coveralls.git",
-                "reference": "c9d3fe2327c8539f1105dc19954673ba993e4ad9"
+                "reference": "4f82a64e0c11575e4becdbca7889dff2b21f82f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-coveralls/php-coveralls/zipball/c9d3fe2327c8539f1105dc19954673ba993e4ad9",
-                "reference": "c9d3fe2327c8539f1105dc19954673ba993e4ad9",
+                "url": "https://api.github.com/repos/php-coveralls/php-coveralls/zipball/4f82a64e0c11575e4becdbca7889dff2b21f82f1",
+                "reference": "4f82a64e0c11575e4becdbca7889dff2b21f82f1",
                 "shasum": ""
             },
             "require": {
@@ -2888,7 +2888,7 @@
                 "symfony/http-kernel": "Allows Symfony integration"
             },
             "bin": [
-                "bin/coveralls"
+                "bin/php-coveralls"
             ],
             "type": "library",
             "extra": {
@@ -2937,7 +2937,7 @@
                 "github",
                 "test"
             ],
-            "time": "2017-10-14T23:16:28+00:00"
+            "time": "2017-12-11T11:06:38+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3400,16 +3400,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.4.3",
+            "version": "6.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "06b28548fd2b4a20c3cd6e247dc86331a7d4db13"
+                "reference": "562f7dc75d46510a4ed5d16189ae57fbe45a9932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/06b28548fd2b4a20c3cd6e247dc86331a7d4db13",
-                "reference": "06b28548fd2b4a20c3cd6e247dc86331a7d4db13",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/562f7dc75d46510a4ed5d16189ae57fbe45a9932",
+                "reference": "562f7dc75d46510a4ed5d16189ae57fbe45a9932",
                 "shasum": ""
             },
             "require": {
@@ -3480,7 +3480,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-10-16T13:18:59+00:00"
+            "time": "2017-11-08T11:26:09+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
