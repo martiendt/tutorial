@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "079cc692304fbb442bf95291e19df22a",
+    "content-hash": "2168df3bc31082b292e6289b8c636bcb",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -261,32 +261,29 @@
         },
         {
             "name": "fideloper/proxy",
-            "version": "3.3.4",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fideloper/TrustedProxy.git",
-                "reference": "9cdf6f118af58d89764249bbcc7bb260c132924f"
+                "reference": "790194d5d3da89a713478875d2e2d05855a90a81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fideloper/TrustedProxy/zipball/9cdf6f118af58d89764249bbcc7bb260c132924f",
-                "reference": "9cdf6f118af58d89764249bbcc7bb260c132924f",
+                "url": "https://api.github.com/repos/fideloper/TrustedProxy/zipball/790194d5d3da89a713478875d2e2d05855a90a81",
+                "reference": "790194d5d3da89a713478875d2e2d05855a90a81",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "~5.0",
+                "illuminate/contracts": "^5.0|^6.0|^7.0",
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "illuminate/http": "~5.0",
-                "mockery/mockery": "~0.9.3",
-                "phpunit/phpunit": "^5.7"
+                "illuminate/http": "^5.0|^6.0|^7.0",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^6.0"
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.3-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Fideloper\\Proxy\\TrustedProxyServiceProvider"
@@ -314,7 +311,7 @@
                 "proxy",
                 "trusted proxy"
             ],
-            "time": "2017-06-15T17:19:42+00:00"
+            "time": "2019-12-20T13:11:11+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2160,21 +2157,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codacy/php-codacy-coverage.git",
-                "reference": "83b7905773e703036294d15e40fbc293deddf58d"
+                "reference": "b99f7cbe1db4f8f912d884e83531f40beb8153a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codacy/php-codacy-coverage/zipball/83b7905773e703036294d15e40fbc293deddf58d",
-                "reference": "83b7905773e703036294d15e40fbc293deddf58d",
+                "url": "https://api.github.com/repos/codacy/php-codacy-coverage/zipball/b99f7cbe1db4f8f912d884e83531f40beb8153a2",
+                "reference": "b99f7cbe1db4f8f912d884e83531f40beb8153a2",
                 "shasum": ""
             },
             "require": {
                 "gitonomy/gitlib": ">=1.0",
                 "php": ">=5.3.3",
-                "symfony/console": "~2.5|~3.0"
+                "symfony/console": "~2.5|~3.0|~4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5"
+                "phpunit/phpunit": "~6.5"
             },
             "bin": [
                 "bin/codacycoverage"
@@ -2197,7 +2194,7 @@
             ],
             "description": "Sends PHP test coverage information to Codacy.",
             "homepage": "https://github.com/codacy/php-codacy-coverage",
-            "time": "2017-09-28T13:10:45+00:00"
+            "time": "2019-10-01T08:37:00+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -3539,6 +3536,7 @@
                 "mock",
                 "xunit"
             ],
+            "abandoned": true,
             "time": "2017-08-03T14:08:16+00:00"
         },
         {
